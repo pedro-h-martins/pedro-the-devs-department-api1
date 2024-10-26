@@ -170,7 +170,12 @@ async def pagina_vereador(vereador_id):
         assiduidade_totais = assiduidade.get_assiduidade_totais()
         porcentagem_presenca = assiduidade.calcular_porcentagem_presenca(vereador_id)
 
+    cursor.close()
+    cursor1.close()
+    cursor2.close()
+
     # Fecha a conexão
+    connection.close()
     connection1.close()
     connection2.close()
 
